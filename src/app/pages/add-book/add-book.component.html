@@ -1,0 +1,32 @@
+<section style="background-image: url(/assets/imagenes/libreria1.jpg);flex-direction: column; background-size: cover; background-position: center; background-repeat: no-repeat;  display: flex; justify-content: center; align-items: center; margin: 50px; border-radius: 50px;">
+    
+  <h4 style="color: azure; margin-top: 50px;">Introduce un libro</h4>
+    
+    <div style="  margin: 50px; border: 1px solid salmon; padding: 50px; background-color: azure; border-radius: 25px;">
+    <div class="mb-3">
+      <label>Título del libro</label>
+    <input [(ngModel)]="nuevoLibro.title"  style="text-align: center;" type="text" class="form-control" id="formGroupExampleInput" required>
+  </div>
+  <div class="mb-3">
+    <label>Género del libro</label>
+    <input [(ngModel)]="nuevoLibro.type"  style="text-align: center;" type="text" class="form-control" id="formGroupExampleInput2" required>
+  </div>
+  <div class="mb-3">
+    <label>Nombre del autor</label>
+    <input [(ngModel)]="nuevoLibro.author"  style="text-align: center;" type="text" class="form-control" id="formGroupExampleInput" required>
+  </div>
+  <div class="mb-3">
+    <label>Precio del libro (€)</label>
+    <input [(ngModel)]="nuevoLibro.price" style="text-align: center;" type="text" class="form-control" id="formGroupExampleInput2" required>
+  </div> 
+<div class="mb-3">
+    <label>URL Foto</label>
+    <input [(ngModel)]="nuevoLibro.photo"  style="text-align: center;" type="text" class="form-control" id="formGroupExampleInput" required>
+  </div>
+  <div class="mb-3">
+    <label>Código del libro</label>
+    <input [(ngModel)]="nuevoLibro.id_book"  style="text-align: center;" type="text" class="form-control" id="formGroupExampleInput2" required>
+  </div>
+  <button (click)="botonSubir()" style="width: 200px; height: 50px; border-radius: 13px; margin: 10px; background-color: palevioletred;">Añadir libro</button>
+  </div>
+</section>

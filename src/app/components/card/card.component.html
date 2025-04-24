@@ -1,0 +1,16 @@
+    <div class="card" style="margin: 50px 0 50px; width: 18rem;">
+        <button type="button" (click)="eliminarLibro()" class="btn-close" aria-label="Close"></button>
+    <img src="{{book.photo}}" class="card-img-top" alt="{{book.title}}">
+    <div class="card-body">
+      <h5 class="card-title">{{book.title}}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{book.type}}</li>
+      <li class="list-group-item">{{book.author}}</li>
+      <li class="list-group-item">{{book.price|currency}}</li>
+      <li class="list-group-item">{{book.id_book|idBooks}}</li>
+    </ul>
+    <div style="display: flex; justify-content: center; align-items: center; margin-bottom: 10px;">
+    <button type="button"  class="btn btn-sm">Comprar</button>
+    </div>
+    </div>

@@ -1,0 +1,74 @@
+    <div style=" display: flex; justify-content: center; flex-direction: column; align-items: center; background-color: pink; margin: 100px; border-radius: 50px;">
+        <form style="margin: 50px; border: 1px solid salmon; padding: 50px; background-color: azure; border-radius: 25px;" [formGroup]="bookForm" (ngSubmit)="busqueda()">
+        <div class="form-group">
+            <label><strong>Id del libro a modificar</strong></label>
+            <input style="margin-top: 20px;" type="number" class="form-control" formControlName="buscarId">
+            <button style="margin-top: 20px; border-radius: 12.5px; background-color: palevioletred; padding: 6.25px;" type="submit">Buscar libro</button>
+          </div>
+        </form>
+          <div *ngIf="libroActual">
+            <form style="margin-bottom: 50px; border: 1px solid salmon; padding: 50px; background-color: azure; border-radius: 25px;" [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label style="margin-top: 10px;" class="form-label"><strong>Título</strong></label>
+            <input type="text" class="form-control" formControlName="title" >
+          </div>
+          <div class="form-group">
+            <label style="margin-top: 10px;" class="form-label"><strong>Autor</strong></label>
+            <input type="text" class="form-control" formControlName="author">
+          </div>
+          <div class="form-group">
+            <label style="margin-top: 10px;" class="form-label"><strong>Imagen</strong></label>
+            <input type="text" class="form-control"  formControlName="photo" >
+          </div>
+          <div class="form-group">
+            <label style="margin-top: 10px;" class="form-label"><strong>Precio (€)</strong></label>
+            <input type="text" class="form-control" formControlName="price">
+          </div>
+          <div class="form-group">
+            <label style="margin-top: 10px;" class="form-label"><strong>Tipo</strong></label>
+            <input type="text" class="form-control"formControlName="type" >
+          </div>
+          <div class="form-group">
+            <label style="margin-top: 10px;" class="form-label"><strong>Id de usuario</strong></label>
+            <input type="text" class="form-control" formControlName="id_user">
+          </div>
+          <div class="form-group">
+            <button style="margin-top: 20px; border-radius: 12.5px; background-color: palevioletred; padding: 6.25px;" type="submit" >Actualizar
+            </button>
+
+          </div>
+          
+          
+
+
+    </form>
+    </div>
+   
+   
+   
+   
+   
+   
+   
+   
+   <!-- <select *ngFor="let book of myBooks">
+        <option  class="list-group-item">{{book.id_book}}
+            <button type="button" (click)="editarLibro()">Editar Libro</button>
+        </option>
+    </select>
+    
+        <h3 style="text-decoration: underline; margin-bottom: 20px;">Editar datos</h3>
+        <input #title style="padding: 5px; text-align: center; border-radius: 5px; margin: 10px;" type="text" placeholder="titulo"
+        name="title" class="form-control" [(ngModel)]="oldBook.title" #titleId="ngModel"
+      [ngClass]="{'is-invalid': (titleId.dirty||titleId.touched) && titleId.invalid}" required>
+      <div *ngIf="(titleId.touched||titleId.dirty) && titleId.invalid" class="invalid-feedback">
+        <div *ngIf="titleId.errors.required">Debe rellenar el campo</div>
+      </div>>
+        <input #author style="padding: 5px; text-align: center; border-radius: 5px; margin: 10px;" type="text" placeholder="autor">
+        <input #idUser style="padding: 5px; text-align: center; border-radius: 5px; margin: 10px;" type="text" placeholder="id Usuario">
+        <input #type style="padding: 5px; text-align: center; border-radius: 5px; margin: 10px;" type="text" placeholder="tipo">
+        <input #photo style="padding: 5px; text-align: center; border-radius: 5px; margin: 10px;" type="text" placeholder="photo">
+        <button (click)="editTitle(title)" (click)="editAuthor(author)" (click)="editIdUser(idUser)" (click)="editPhoto(photo)" style="width: 200px; height: 50px; border-radius: 13px; margin: 10px; background-color: palevioletred;">Modificar</button> -->
+
+
+

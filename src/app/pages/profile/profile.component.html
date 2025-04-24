@@ -1,0 +1,21 @@
+<div style="display: flex; justify-content: center; align-items: center; background-image: url('/assets/imagenes/libreria.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; width: 100vw;">
+    <div id="container_hijo" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <aside id="aside_1" style="margin: 50px 0 50px; border: 1px solid salmon; padding: 50px; background-color: azure; border-radius: 25px;  display: flex; flex-direction: column; justify-content: center; align-items: center; width: 300px; height: 500px;">
+           <img style="width: 88px; height: auto; border-radius: 50px;" src="{{miuser.photo}}">
+            <p style="margin-bottom: 50px;">📚 {{miuser.name}} {{miuser.last_name}}</p>
+            <div style="display: flex; flex-direction: row;"> <p><strong>Nombre: </strong></p> <div style="border-radius: 5px; border: 1px solid gray; width: 200px; height: 27px; text-align: center; margin-left: 5px;" > {{miuser.name}}</div> </div>
+           <div style="display: flex; flex-direction: row;"> <p><strong>Apellido: </strong></p> <div style="border-radius: 5px; border: 1px solid gray; width: 200px; height: 27px; text-align: center; margin-left: 5px;" > {{miuser.last_name}}</div> </div>
+           <div style="display: flex; flex-direction: row;"> <p><strong>Email: </strong></p> <div style="margin-right: -20px; border-radius: 5px; border: 1px solid gray; width: 200px; height: 27px; text-align: center; margin-left: 5px;" > {{miuser.email}}</div> </div>
+           
+        </aside>
+        <aside id="aside2" style="margin: 50px 0 50px; border: 1px solid salmon; padding: 50px; background-color: azure; border-radius: 25px;  display: flex; flex-direction: column; justify-content: center; align-items: center; width: 300px; height: 500px;">
+            <h3 style="text-decoration: underline; margin-bottom: 20px;">Editar datos</h3>
+            <input #nombre style="padding: 5px; text-align: center; border-radius: 5px; margin: 10px;" type="text" placeholder="Nombre">
+            <input #apellido style="padding: 5px; text-align: center; border-radius: 5px; margin: 10px;" type="text" placeholder="Apellido">
+            <input #correo style="padding: 5px; text-align: center; border-radius: 5px; margin: 10px;" type="text" placeholder="Correo">
+            <input #url style="padding: 5px; text-align: center; border-radius: 5px; margin: 10px;" type="text" placeholder="URL">
+            <button (click)="editar1(nombre)" (click)="editar2(apellido)" (click)="editar3(correo)" (click)="editar4(url)" style="width: 200px; height: 50px; border-radius: 13px; margin: 10px; background-color: palevioletred;">Modificar</button>
+
+        </aside>
+    </div>
+</div>

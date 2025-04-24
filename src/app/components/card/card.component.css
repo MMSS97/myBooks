@@ -1,0 +1,15 @@
+.button_style{
+    width: 150px; 
+    margin-top: 15px; 
+    height: 50px; background-color: azure; 
+    border-radius: 5px; 
+    border-bottom: 5px solid gray;
+}
+.button_style2{
+    width: 150px; 
+    margin-top: 15px; 
+    height: 50px; background-color: palevioletred; 
+    border-radius: 5px; 
+    border-bottom: 5px solid gray;
+
+}

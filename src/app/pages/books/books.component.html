@@ -1,0 +1,10 @@
+<!--cards-->
+<div *ngIf="myBooks.length!==0; else noHay" class="container" style="background-color: beige; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+    <app-card *ngFor="let card of myBooks" 
+    [book]="card" 
+    (eventoEliminar)="eliminar($event)"
+   >
+    
+  </app-card>   
+</div>
+<ng-template #noHay> <p style="background-image: url(/assets/imagenes/libreria.jpg); color: white; font-size: xx-large; background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh; display: flex;"><strong style="margin: 50px;">No hay libros en la biblioteca</strong> </p> </ng-template>
