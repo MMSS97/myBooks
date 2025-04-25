@@ -10,27 +10,75 @@
             <form style="margin-bottom: 50px; border: 1px solid salmon; padding: 50px; background-color: azure; border-radius: 25px;" [formGroup]="bookForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label style="margin-top: 10px;" class="form-label"><strong>Título</strong></label>
-            <input type="text" class="form-control" formControlName="title" >
+            <input type="text" class="form-control" formControlName="title" [ngClass]="{'is-invalid': (bookForm.get('title')?.dirty || bookForm.get('title')?.touched) && !bookForm.get('title')?.valid
+          }">
+          <div *ngIf="
+          (bookForm.get('title')?.dirty ||
+            bookForm.get('title')?.touched) &&
+          !bookForm.get('title')?.valid" 
+          class="invalid--feedback">
+                        Este campo es obligatorio
+                    </div>
           </div>
           <div class="form-group">
             <label style="margin-top: 10px;" class="form-label"><strong>Autor</strong></label>
-            <input type="text" class="form-control" formControlName="author">
+            <input type="text" class="form-control" formControlName="author"[ngClass]="{'is-invalid': (bookForm.get('author')?.dirty || bookForm.get('author')?.touched) && !bookForm.get('author')?.valid
+          }">
+          <div *ngIf="
+          (bookForm.get('author')?.dirty ||
+            bookForm.get('author')?.touched) &&
+          !bookForm.get('author')?.valid" 
+          class="invalid--feedback">
+                        Este campo es obligatorio
+                    </div>
           </div>
           <div class="form-group">
             <label style="margin-top: 10px;" class="form-label"><strong>Imagen</strong></label>
-            <input type="text" class="form-control"  formControlName="photo" >
+            <input type="text" class="form-control"  formControlName="photo" [ngClass]="{'is-invalid': (bookForm.get('photo')?.dirty || bookForm.get('photo')?.touched) && !bookForm.get('photo')?.valid
+          }">
+          <div *ngIf="
+          (bookForm.get('photo')?.dirty ||
+            bookForm.get('photo')?.touched) &&
+          !bookForm.get('photo')?.valid" 
+          class="invalid--feedback">
+                        Este campo es obligatorio
+                    </div>
           </div>
           <div class="form-group">
             <label style="margin-top: 10px;" class="form-label"><strong>Precio (€)</strong></label>
-            <input type="text" class="form-control" formControlName="price">
+            <input type="number" class="form-control" formControlName="price"[ngClass]="{'is-invalid': (bookForm.get('price')?.dirty || bookForm.get('price')?.touched) && !bookForm.get('price')?.valid
+          }">
+          <div *ngIf="
+          (bookForm.get('price')?.dirty ||
+            bookForm.get('price')?.touched) &&
+          !bookForm.get('price')?.valid" 
+          class="invalid--feedback">
+                        Este campo es obligatorio
+                    </div>
           </div>
           <div class="form-group">
             <label style="margin-top: 10px;" class="form-label"><strong>Tipo</strong></label>
-            <input type="text" class="form-control"formControlName="type" >
+            <input type="text" class="form-control"formControlName="type" [ngClass]="{'is-invalid': (bookForm.get('type')?.dirty || bookForm.get('type')?.touched) && !bookForm.get('type')?.valid
+          }">
+          <div *ngIf="
+          (bookForm.get('type')?.dirty ||
+            bookForm.get('type')?.touched) &&
+          !bookForm.get('type')?.valid" 
+          class="invalid--feedback">
+                        Este campo es obligatorio
+                    </div>
           </div>
           <div class="form-group">
             <label style="margin-top: 10px;" class="form-label"><strong>Id de usuario</strong></label>
-            <input type="text" class="form-control" formControlName="id_user">
+            <input type="number" class="form-control" formControlName="id_user" [ngClass]="{'is-invalid': (bookForm.get('id_user')?.dirty || bookForm.get('id_user')?.touched) && !bookForm.get('id_user')?.valid
+            }">
+            <div *ngIf="
+            (bookForm.get('id_user')?.dirty ||
+              bookForm.get('id_user')?.touched) &&
+            !bookForm.get('id_user')?.valid" 
+            class="invalid--feedback">
+                          Este campo es obligatorio
+                      </div>
           </div>
           <div class="form-group">
             <button style="margin-top: 20px; border-radius: 12.5px; background-color: palevioletred; padding: 6.25px;" type="submit" >Actualizar
