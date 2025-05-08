@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Book } from 'src/app/models/book';
+import { Respuesta } from 'src/app/models/respuesta';
 import { BooksService } from 'src/app/shared/books.service';
 
 @Component({
@@ -17,10 +18,12 @@ export class CardComponent implements OnInit {
     this.eventoEliminar.emit(this.book.id_book)
 
   }
- 
-  
-  constructor(booksService:BooksService){}
- ngOnInit(): void {
+   ngOnInit(){
    
- }
+   }
+  
+   
+  
+  constructor(public booksService:BooksService){}
+ 
 }
