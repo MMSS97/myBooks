@@ -96,6 +96,5 @@ export class UpdateBookComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // Inicialización adicional si es necesaria
   }
 }

@@ -38,7 +38,7 @@ export class BooksComponent implements OnInit{
  public eliminar(id:number): void {
   this.booksService.eliminar(id).subscribe(
       () => {
-          this.cargarLibros(); // Recargar la lista después de eliminar
+          this.cargarLibros(); 
       },
       error => {
           console.error('Error al eliminar libro:', error);
